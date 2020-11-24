@@ -24,7 +24,14 @@ def click_but(valor):
 
 def clear():
     ecu_int.delete (0, END)
+    ecu_res.delete(0, END)
     i = 0
+
+def resolver():
+    ecu_res.delete(0, END)
+    ec = ecu_int.get()
+    resultado = eval(ec)
+    ecu_res.insert(0, resultado)
 
 #Configuración botones calculadora
 
@@ -44,10 +51,10 @@ boton_aparentesis = Button(window, text = "(", width = 5, height =2, command = l
 boton_cparentesis = Button(window, text = ")", width = 5, height =2, command = lambda: click_but(")"))
 
 boton_div = Button(window, text = "/", width = 5, height =2, command = lambda: click_but("/"))
-boton_mult = Button(window, text = "x", width = 5, height =2, command = lambda: click_but("x"))
+boton_mult = Button(window, text = "x", width = 5, height =2, command = lambda: click_but("*"))
 boton_sum = Button(window, text = "+", width = 5, height =2, command = lambda: click_but("+"))
 boton_res = Button(window, text = "-", width = 5, height =2, command = lambda: click_but("-"))
-boton_eq = Button(window, text = "=", width = 5, height =2, command = lambda: click_but("="))
+boton_eq = Button(window, text = "=", width = 5, height =2, command = lambda: resolver())
 
 #Agregar botones a la interfaz
 
