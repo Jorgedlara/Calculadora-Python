@@ -18,8 +18,13 @@ ecu_res.grid(row =1, column = 0, columnspan = 4, padx =5, pady = 5)
 #Funciones
 
 def click_but(valor):
+    global i
     ecu_int.insert(i, valor)
     i += 1
+
+def clear():
+    ecu_int.delete (0, END)
+    i = 0
 
 #Configuración botones calculadora
 
@@ -34,7 +39,7 @@ boton8 = Button(window, text = "8", width = 5, height =2, command = lambda: clic
 boton9 = Button(window, text = "9", width = 5, height =2, command = lambda: click_but(9))
 boton0 = Button(window,text = "0", width = 23, height =2, command = lambda: click_but(0))
 
-boton_clear = Button(window, text = "C", width = 5, height =2, command = lambda: click_but())
+boton_clear = Button(window, text = "C", width = 5, height =2, command = lambda: clear())
 boton_aparentesis = Button(window, text = "(", width = 5, height =2, command = lambda: click_but("("))
 boton_cparentesis = Button(window, text = ")", width = 5, height =2, command = lambda: click_but(")"))
 
