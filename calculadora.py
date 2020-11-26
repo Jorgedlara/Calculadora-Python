@@ -26,6 +26,8 @@ def clear():
     ecu_int.delete (0, END)
     ecu_res.delete(0, END)
     i = 0
+    resultado = 0
+    ecu_res.insert(0, resultado)
 
 def resolver():
     ecu_res.delete(0, END)
