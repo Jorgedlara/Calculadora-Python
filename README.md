@@ -6,3 +6,7 @@ Para iniciar la calculadora copiar el repositorio a local, abrir consola de coma
 python calculadora.py
 
 O simplemente dar doble click en el ejecutable calculadora.exe 
+
+Para ejecutar las pruebas unitarias correr en consola de comandos: 
+
+python unit_test.py
